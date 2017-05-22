@@ -3,95 +3,16 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Psychic Game</title>
+	<script type="text/javascript" src="assets/javascript/game.js"></script>
 </head>
 <body>
 
 <h1>Psychic Game</h1>
-
-<h3>Wins: <span id="wins"></span> </h3>
-<h3>Losses: <span id="losses"></span> </h3>
-<h3>Guesses Left: <span id="guesses-left"></span></h3>
-<h3>Your guesses so far: <span id="wrong-guess"></span>  </h3> 
-
-<script>
-
-	var letters = ["a", "b", "c", "d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
-
-	var wrongGuesses = [];
-
-	var guesses = 10;
-
-	document.getElementById("guesses-left").innerHTML = guesses;
-
-	var losses = 0;
-	document.getElementById("losses").innerHTML = losses;
-
-	var wins = 0;
-	document.getElementById("wins").innerHTML = wins;
-
-	var compPick = letters[Math.floor(Math.random() * letters.length)];
-	
-
-	document.onkeyup = function(event){
-
-
-		var playerPick = event.key;
-
-		var playerPick = playerPick.toLowerCase();
-
-
-
-		if (letters.indexOf(playerPick) !== -1 ){
-			
-			
-				if (playerPick === compPick){
-
-					wins++;
-
-					document.getElementById("wins").innerHTML = wins;
-
-					wrongGuesses.length = 0;
-
-					document.getElementById("wrong-guess").innerHTML = wrongGuesses;
-
-					compPick = letters[Math.floor(Math.random() * letters.length)];
-				} else {
-
-
-					if(guesses > 1){
-
-						if(wrongGuesses.indexOf(playerPick) === -1){
-
-							wrongGuesses.push(playerPick);
-
-							guesses--;
-
-							document.getElementById("guesses-left").innerHTML = guesses;
-
-							document.getElementById("wrong-guess").innerHTML = wrongGuesses;
-						}
-
-					} else {
-
-						losses++;
-
-						document.getElementById("losses").innerHTML = losses;
-
-						guesses = 10;
-
-						document.getElementById("guesses-left").innerHTML = guesses;
-
-						wrongGuesses.length = 0;
-
-						document.getElementById("wrong-guess").innerHTML = wrongGuesses;
-
-						compPick = letters[Math.floor(Math.random() * letters.length)];
-					}
-				}
-		}
-	}
-
-</script>
+<h2>Guess what letter I'm thinking of.</h2>
+<h3 id="wins">Wins: 0</h3>
+<h3 id="losses">Losses: 0</h3>
+<h3 id="guesses">Guesses left: 10</h3>
+<h3 id="wrongLetters">Your guesses so far:</h3>
 	
 </body>
 </html>
