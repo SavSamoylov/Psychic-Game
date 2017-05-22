@@ -22,7 +22,7 @@ function startGame() {
         var pickCode = playerPick.charCodeAt(0);
 
         // This If statement makes sure that only letter keys are logged and evaluated.
-        if (playerPick.length == 1 && (pickCode > 97 && pickCode < 122)) {
+        if (playerPick.length == 1 && (pickCode >= 97 && pickCode <= 122)) {
         	// If the Player guesses the computers pick correctly, the Win count is increased by 1,
         	// and the game restarts.
             if (compPick === playerPick) {
