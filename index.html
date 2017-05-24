@@ -3,16 +3,29 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Psychic Game</title>
+	<link rel="stylesheet" href="assets/css/reset.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Dosis:500,600" rel="stylesheet">
 	<script type="text/javascript" src="assets/javascript/game.js"></script>
 </head>
 <body>
 
-<h1>Psychic Game</h1>
-<h2>Guess what letter I'm thinking of.</h2>
-<h3 id="wins">Wins: 0</h3>
-<h3 id="losses">Losses: 0</h3>
-<h3 id="guesses">Guesses left: 10</h3>
-<h3 id="wrongLetters">Your guesses so far:</h3>
-	
+<div id="gameField">
+	<div class="imgWrap">
+		<img src="assets/images/logo.png" width="157" height="132">
+	</div>
+	<h2>Test your ability and guess what letter I'm thinking of.</h2>
+	<h3 id="guesses">Guesses left: 10</h3>
+	<h3 id="wrongLetters">Your guesses so far:</h3>
+	<footer>
+		<div>
+			<h3 id="wins">Wins: 0</h3>
+		</div>
+		<div>
+			<h3 id="losses">Losses: 0</h3>
+		</div>
+	</footer>
+</div>
+
 </body>
 </html>

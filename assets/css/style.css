@@ -1,0 +1,68 @@
+*{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body{
+	background: #21c393;
+	font-family:"Dosis", sans-serif;
+}
+
+#gameField {
+	position: relative;
+	height:100%;
+	padding-bottom: 75px;
+	max-width:320px;
+	margin:100px auto;
+	background: #ffffff;
+	-webkit-box-shadow: 0px 5px 30px #1c9471;
+	box-shadow: 0px 5px 30px #1c9471;
+	overflow: hidden;
+}
+
+.imgWrap{
+	width: 152px;
+	margin:20px auto;
+
+}
+
+
+h2{	
+	font-size:20px;
+	padding:0 20px 20px;
+	color:#121f84;
+}
+
+h3{
+	font-size:18px;
+	padding: 20px 15px;
+	font-weight:600;
+	color: #666;
+}
+
+footer{
+	position: absolute;
+	width:100%;
+	bottom:0;
+	background:#e5eff3;
+	text-align: center;
+	margin-top:20px;
+	height:50px;
+	line-height: 50px;
+	text-transform: uppercase;
+	border-top:1px solid lightblue;
+}
+
+footer div{
+	position: relative;
+	float:left;
+	width:50%;
+}
+
+footer div h3{
+	padding:0;
+	color:#121f84;
+}
+
+
